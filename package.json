@@ -1,0 +1,26 @@
+{
+  "name": "commander-claus",
+  "version": "0.0.0",
+  "description": "Secret Santa from the command line.",
+  "main": "index.js",
+  "scripts": {
+    "test": "node_modules/mocha/bin/mocha"
+  },
+  "bin": {
+    "claus": "bin/claus"
+  },
+  "keywords": [
+    "secret",
+    "santa",
+    "command",
+    "line"
+  ],
+  "author": "Dana Silver <dsilver@middlebury.edu>",
+  "license": "MIT",
+  "dependencies": {
+    "commander": "^2.3.0",
+    "dsv": "0.0.4",
+    "lodash": "^2.4.1",
+    "nodemailer": "^1.3.0"
+  }
+}

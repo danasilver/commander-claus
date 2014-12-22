@@ -1,0 +1,34 @@
+#!/usr/bin/env node
+
+var Claus = require('..');
+var program = require('commander');
+var fs = require('fs');
+
+program
+  .version('0.0.1')
+  .option('-f, --file <file>', 'A .csv file as input', 'claus.csv')
+  .option('-d, --delim <delimiter>', 'The file delimiter', ',')
+  .option('-s, --subject <email subject>', 'The email subject', 'Secret Santa')
+  .option('--dryrun', 'Don\'t send emails', false)
+  .option('--reveal', 'Reveal matches', false)
+  .parse(process.argv);
+
+var csv = require('dsv')(program.delim)
+
+var clausOptions = {
+  names: csv.parse(fs.readFileSync(program.file, 'utf8')),
+  subject: program.subject
+};
+
+var claus = new Claus(clausOptions);
+
+if (program.reveal) {
+  console.log('Matches:');
+
+  claus.pairs.forEach(function (pair) {
+    console.log('  ' + pair[0].name + ' => ' + pair[1].name);
+  })
+}
+
+if (!program.dryrun)
+  claus.sendMail();
