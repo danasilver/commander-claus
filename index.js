@@ -1,6 +1,6 @@
-var _ = require('lodash'),
-    nodemailer = require('nodemailer'),
-    fs = require('fs');
+var _ = require('lodash');
+var nodemailer = require('nodemailer');
+var fs = require('fs');
 
 module.exports = function (options) {
   options = _.defaults(options, {'subject': 'Secret Santa',
