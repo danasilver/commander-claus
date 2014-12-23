@@ -1,7 +1,6 @@
 Hey <%= giver %>!
 
-Santa really screwed the raindeer last time.
-Your real match for the Secret Santa is <%= receiver %>.
+Your match for the Secret Santa is <%= receiver %>.
 
 Happy shopping!
 
