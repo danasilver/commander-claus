@@ -1,6 +1,6 @@
 {
   "name": "commander-claus",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "Secret Santa from the command line.",
   "main": "index.js",
   "scripts": {
