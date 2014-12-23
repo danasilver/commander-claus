@@ -27,7 +27,7 @@ delimiter.  A custom delimiter can be set with the `-d, --delim` flag.
 Default: `,`.
 
 The delimiter passed to [dsv](https://github.com/mbostock/dsv).  Used to parse
-the
+the input file.
 
 #### `-s, --subject`
 
